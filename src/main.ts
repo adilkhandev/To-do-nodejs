@@ -1,12 +1,17 @@
-import express, { Router } from 'express';
 import dotenv from 'dotenv';
 
-dotenv.config()
-const PORT = 8080
-const app = express();
+import app from './app';
+dotenv.config();
+
+const PORT = process.env.PORT || 8080
+
+const start = () => {
+    
+}
 
 app.listen(PORT, () => {
-    console.log(`Server is up and runnig on ${PORT}`)
+    
+    console.log(`Server is up and running on ${PORT}`)
 });
 
 
