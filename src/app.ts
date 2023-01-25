@@ -3,8 +3,8 @@ import { json, urlencoded } from 'body-parser'
 import cookieSession from 'cookie-session';
 
 import { SignUpRouter, SignInRouter, GetAllTask } from './http/routers'
-import { currentUser } from './middleware/auth/logged-in-user';
-import { requireAuth } from './middleware/auth/require-auth';
+import { currentUser } from './http/routers/middleware/auth/logged-in-user';
+import { requireAuth } from './http/routers/middleware/auth/require-auth';
 
 const app = express();
 
@@ -20,7 +20,7 @@ app.use(SignUpRouter)
 app.use(SignInRouter);
 app.use(currentUser)
 
-app.use(requireAuth)
+app.use(requireAuth);
 app.use(GetAllTask);
 
 declare global {
