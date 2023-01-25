@@ -1,8 +1,8 @@
 import { Router, Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken'
 
-import { authenticationService } from '../common/services/authentication';
-import { getUser } from '../model/user'
+import { authenticationService } from '../../common/services/authentication';
+import { getUser } from '../../app/database/mysql/model/user'
 const router = Router();
 
 router.post('/api/signIn', async (req: Request, res: Response, next: NextFunction) => {

@@ -1,6 +1,6 @@
 import { Router, Request, Response, NextFunction } from 'express';
 
-import { signUp, getUser } from '../model/user';
+import { signUp, getUser } from '../../app/database/mysql/model/user';
 
 const router = Router();
 

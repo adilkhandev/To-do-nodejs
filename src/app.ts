@@ -2,9 +2,10 @@ import express, { Response, Request, NextFunction } from 'express';
 import { json, urlencoded } from 'body-parser'
 import cookieSession from 'cookie-session';
 
-import { SignUpRouter, SignInRouter, GetAllTask } from './routers'
+import { SignUpRouter, SignInRouter, GetAllTask } from './http/routers'
 import { currentUser } from './middleware/auth/logged-in-user';
 import { requireAuth } from './middleware/auth/require-auth';
+
 const app = express();
 
 app.use(urlencoded({

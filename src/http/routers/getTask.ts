@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response, Router } from "express";
-import { getAll } from '../model/task'
+import { getAll } from '../../app/database/mysql/model/task'
 const router = Router();
 
 router.get('/api/task-list', (req: Request, res: Response, next: NextFunction) => {

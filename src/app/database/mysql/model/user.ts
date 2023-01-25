@@ -1,8 +1,8 @@
-import { DBCLient } from '../database';
+import { DBCLient } from '../connection';
 import { v4 as uuidv4 } from 'uuid';
 
 
-import { authenticationService } from '../common/services/authentication';
+import { authenticationService } from '../../../../common/services/authentication';
 
 export const signIn = async (email: string, password: string): Promise<Object> => {
     return new Promise(async (resolve, reject) => {

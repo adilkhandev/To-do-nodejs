@@ -1,4 +1,4 @@
-import { DBCLient } from "../database";
+import { DBCLient } from "../connection";
 
 export const getAll = (userId: string | undefined) => {
     const sql = `select * from task where user_id='${userId}'`;
