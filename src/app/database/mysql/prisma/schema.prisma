@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:random@123@localhost:3306/to-do"
+}
+
+model User {
+  id    String     @id @default(uuid())
+  email String  @unique
+  name  String
+  password String
+  status Int @default(1)
+
+}
+
+model SignUp {
+  id    String     @id @default(uuid())
+  email String  @unique
+  name  String
+  password String
+  status Int @default(1)
+ }
+
+
+model Task {
+  id         String    @id @default(uuid())
+  user_id    String 
+  created_on DateTime  @default(now())
+  updated_on DateTime  @updatedAt
+  content    String
+  status     Int       @default(1)
+}
