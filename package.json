@@ -25,12 +25,15 @@
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "express-validator": "^6.14.2",
+    "inquirer": "^9.1.4",
     "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
     "prisma": "^4.9.0",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/inquirer": "^9.0.3",
     "@types/mysql": "^2.15.21",
     "nodemon": "^2.0.20"
   }
